@@ -1,10 +1,10 @@
-#!/usr/bin/python3
-""" console """
+
 
 import unittest
 import cmd
 from datetime import datetime
 import models
+B
 from models.amenity import Amenity
 from models.base_model import BaseModel
 from models.city import City
@@ -19,9 +19,11 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
 
 
 class HBNBCommand(cmd.Cmd):
+    B
     """ HBNH console """
     prompt = '(hbnb) '
 
+    B
     def do_EOF(self, arg):
         """Exits console"""
         return True
@@ -36,6 +38,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_create(self, arg):
         """Creates a new instance of a class"""
+        B
         args = shlex.split(arg)
         if len(args) == 0:
             print("** class name missing **")
@@ -124,11 +127,15 @@ class HBNBCommand(cmd.Cmd):
                                         args[3] = int(args[3])
                                     except:
                                         args[3] = 0
+                                    else:
+                                         args[3] = int(args[3])
                                 elif args[2] in floats:
                                     try:
                                         args[3] = float(args[3])
                                     except:
                                         args[3] = 0.0
+                                    else:
+                                         args[3] = float(args[3])
                             setattr(models.storage.all()[k], args[2], args[3])
                             models.storage.all()[k].save()
                         else:
