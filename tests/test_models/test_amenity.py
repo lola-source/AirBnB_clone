@@ -89,8 +89,8 @@ class TestAmenityInstances(unittest.TestCase):
         actual = 1
         try:
             serialized = json.dumps(self.amenity_json)
-        except notSerialized
-        actual = 0
+        except:
+            actual = 0
         self.assertTrue(1 == actual)
 
     def test_json_class(self):
