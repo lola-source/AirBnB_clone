@@ -22,7 +22,7 @@ class TestHBNBCommandDocs(unittest.TestCase):
 
     def test_doc_file(self):
         """... documentation for the file"""
-        expected = '\nCommand interpreter for Holberton AirBnB project\n'
+        expected = 'This is the console for AirBnB'
         actual = console.__doc__
         self.assertEqual(expected, actual)
 
