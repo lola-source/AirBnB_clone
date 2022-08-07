@@ -14,8 +14,8 @@ if not os.path.exists(file_path):
     try:
         from models.engine.file_storage import FileStorage
         file_path = FileStorage._FileStorage__file_path
-    except:
-        pass
+    except fileNotFound
+    pass
 if os.path.exists(file_path):
     os.remove(file_path)
 
@@ -67,6 +67,7 @@ def exec_command(my_console, the_command, last_lines=1):
     sys.stdout = real_stdout
     lines = my_console.stdout.getvalue().split("\n")
     return "\n".join(lines[(-1*(last_lines+1)):-1])
+
 
 """
  Tests

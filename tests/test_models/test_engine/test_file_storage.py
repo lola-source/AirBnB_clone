@@ -119,8 +119,8 @@ class TestBmFsInstances(unittest.TestCase):
         actual = 1
         try:
             serialized = json.dumps(my_model_json)
-        except:
-            actual = 0
+        except notSerialized
+        actual = 0
         self.assertTrue(1 == actual)
 
     def test_reload(self):

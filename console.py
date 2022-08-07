@@ -108,18 +108,18 @@ class HBNBCommand(cmd.Cmd):
         if not error:
             print('[', end='')
             fs_o = FS.all()
-            l = 0
+            ll = 0
             if arg:
                 for v in fs_o.values():
                     if type(v).__name__ == CNC[arg[0]].__name__:
-                        l += 1
+                        ll += 1
                 c = 0
                 for v in fs_o.values():
                     if type(v).__name__ == CNC[arg[0]].__name__:
                         c += 1
                         print(v, end=(', ' if c < l else ''))
             else:
-                l = len(fs_o)
+                ll = len(fs_o)
                 c = 0
                 for v in fs_o.values():
                     print(v, end=(', ' if c < l else ''))
@@ -151,9 +151,9 @@ class HBNBCommand(cmd.Cmd):
     def __check_dict(self, arg):
         """checks if the arguments input has a dictionary"""
         if '{' and '}' in arg:
-            l = arg.split('{')[1]
-            l = l.split(', ')
-            l = list(s.split(':') for s in l)
+            ll = arg.split('{')[1]
+            ll = l.split(', ')
+            ll = list(s.split(':') for s in l)
             d = {}
             for subl in l:
                 k = subl[0].strip('"\' {}')
@@ -258,6 +258,7 @@ class HBNBCommand(cmd.Cmd):
                     v(new_arg)
                     return
         self.default(arg)
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

@@ -41,8 +41,8 @@ class BaseModel:
         try:
             nada = json.dumps(obj_v)
             return True
-        except:
-            return False
+        except __not_serializable
+        return False
 
     def bm_update(self, name, value):
         setattr(self, name, value)
